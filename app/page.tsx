@@ -2,7 +2,7 @@
 import { apiClient } from "@/lib/api-client";
 import { IVideo } from "@/models/Video";
 import { useEffect, useState } from "react";
-import Video from "./components/Video";
+import Video from "./components/Videos";
 
 export default function Home() {
   const [videos, setVideos] = useState<IVideo[]>([]);
@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
   return (
     <main className="px-6 py-4 min-h-screen h-full w-full flex flex-col items-center space-y-6">
-      <h1 className="text-3xl text-center font-bold">ImageKit ReelsPro</h1>
+      <h1 className="text-6xl text-center py-6 font-bold">ImageKit ReelsPro</h1>
 
       <Video videos={videos} />
     </main>

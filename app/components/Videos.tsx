@@ -3,7 +3,7 @@ import { IVideo } from "@/models/Video";
 import React from "react";
 import VideoCard from "./VideoCard";
 
-const Video = ({ videos }: { videos: IVideo[] }) => {
+const Videos = ({ videos }: { videos: IVideo[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {videos.map(video =>
@@ -23,4 +23,4 @@ const Video = ({ videos }: { videos: IVideo[] }) => {
   );
 };
 
-export default Video;
+export default Videos;

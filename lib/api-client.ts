@@ -9,6 +9,9 @@ type FetchOptions = {
 
 export type VideoFormData = Omit<IVideo, "_id">;
 
+export interface SingleVideoProps {
+  video: IVideo;
+}
 export class ApiClient {
   private async fetch<T>(
     endpoint: string,
@@ -36,8 +39,8 @@ export class ApiClient {
     return this.fetch<IVideo[]>("/videos");
   }
 
-  async getVideo(id: string | undefined) {
-    return this.fetch<IVideo>(`/videos/${id}`);
+  async getVideo(id: string | string[] | undefined) {
+    return this.fetch<SingleVideoProps>(`/videos/${id}`);
   }
 
   async createVideo(videoData: VideoFormData) {

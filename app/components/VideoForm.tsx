@@ -16,7 +16,7 @@ interface VideoFormData {
   thumbnailUrl: string;
 }
 
-export default function VideoUploadForm() {
+export default function VideoForm() {
   const [loading, setLoading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const { showNotification } = useNotification();
