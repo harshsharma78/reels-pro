@@ -36,7 +36,7 @@ export class ApiClient {
     return this.fetch<IVideo[]>("/videos");
   }
 
-  async getVideo(id: string) {
+  async getVideo(id: string | undefined) {
     return this.fetch<IVideo>(`/videos/${id}`);
   }
 
